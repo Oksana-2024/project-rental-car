@@ -1,0 +1,15 @@
+.headerPage {
+  background-color: var(--header-bg);
+  padding-top: 23px;
+  padding-bottom: 23px;
+  border-bottom: 1px solid var(--header-bg);
+}
+.headerContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.logoAccent {
+  color: var();
+}

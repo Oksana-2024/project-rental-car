@@ -1,0 +1,17 @@
+.button {
+  color: var(--white-color);
+  background-color: var(--btn-bg);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--main-font);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.25;
+  transition: background-color 0.3s var(--main-transition);
+}
+
+.button:hover {
+  background-color: var(--hover-bg);
+}
