@@ -20,7 +20,7 @@ const RentForm = () => {
     formState: { errors },
     reset,
   } = useForm({
-    defaultValues: { name: "", email: "", comment: "", date: "" },
+    defaultValues: { name: "", email: "", comment: "", date: undefined },
     resolver: zodResolver(schemaRentForm),
   });
 
@@ -63,14 +63,11 @@ const RentForm = () => {
             render={({ field }) => (
               <DatePicker
                 locale="en-GB"
-                {...field}
                 selected={field.value as unknown as Date}
                 dateFormat="dd.MM.yyyy"
                 className={s.datePicker}
                 placeholderText="Booking date"
-                onChange={(date) => {
-                  field.onChange(date);
-                }}
+                onChange={field.onChange}
               />
             )}
           />
