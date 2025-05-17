@@ -1,0 +1,98 @@
+.formContainer {
+  padding: 32px;
+  border: 1px solid var(--decor-line);
+  border-radius: 10px;
+  width: 640px;
+  height: 488px;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  text-align: left;
+  margin-bottom: 8px;
+}
+
+.text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  color: var(--gray-color);
+  text-align: left;
+  margin-bottom: 24px;
+}
+
+.input,
+.comment {
+  border-radius: 12px;
+  padding: 12px 20px;
+  width: 576px;
+  height: 48px;
+  background-color: var(--input-bg);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+.datePicker::placeholder,
+.input::placeholder,
+.comment::placeholder {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  color: var(--gray-color);
+}
+
+.comment {
+  resize: none;
+  width: 576px;
+  height: 88px;
+  margin-bottom: 24px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sendBtn {
+  width: 156px;
+  height: 44px;
+}
+
+.controller {
+  border-radius: 12px;
+  padding: 12px 20px;
+  width: 576px;
+  height: 48px;
+  background-color: var(--input-bg);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+.datePicker {
+  border-radius: 12px;
+  padding: 12px 20px;
+  width: 576px;
+  height: 48px;
+  background-color: var(--input-bg);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+.error {
+  height: 16px;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.date_box {
+  margin-bottom: 16px;
+}
+
+
+
