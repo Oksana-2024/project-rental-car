@@ -55,9 +55,15 @@
   margin-bottom: 16px;
 }
 
-.readMore {
+.readMoreBtn {
   width: 276px;
   height: 44px;
+  background-color: var(--accent-color);
+  transition: background-color 0.3s var(--main-transition);
+}
+
+.readMoreBtn:hover {
+  background-color: var(--hover-bg);
 }
 
 .descCarBox {

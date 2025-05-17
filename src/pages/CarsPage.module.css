@@ -18,5 +18,4 @@
 .loadMoreBtn:hover,
 .loadMoreBtn:focus {
   border: 1px solid var(--hover-bg);
-  background-color: transparent;
 }

@@ -1,16 +1,18 @@
 import { Controller, useForm } from "react-hook-form";
-import s from "./SearchBar.module.css";
-import Button from "../Button/Button";
 import { useSelector } from "react-redux";
+import clsx from "clsx";
+
+import { IoIosArrowDown } from "react-icons/io";
+import { formatWithCommas, removeNonDigits } from "../../utils/formatMileage";
 import { selectBrands } from "../../redux/brands/selectors";
 import { useAppDispatch } from "../../hooks/useAppDispatch";
 import { getCars } from "../../redux/cars/operations";
 import { setSearch } from "../../redux/cars/slice";
-import { formatWithCommas, removeNonDigits } from "../../utils/formatMileage";
-import { IoIosArrowDown } from "react-icons/io";
+import Button from "../Button/Button";
+import s from "./SearchBar.module.css";
 
 const SearchBar = () => {
-  const { register, control, handleSubmit } = useForm({
+  const { register, watch, control, handleSubmit } = useForm({
     defaultValues: {
       minMileage: "",
       brand: "",
@@ -33,10 +35,10 @@ const SearchBar = () => {
           dispatch(setSearch(value));
           dispatch(getCars(false));
         })}
-        className={s.form}
+        className={s.searchForm}
       >
         <div className={s.labelBox}>
-          <label className={s.label} htmlFor="brand">
+          <label className={s.searchFormLabel} htmlFor="brand">
             Car brand
           </label>
           <select
@@ -44,7 +46,7 @@ const SearchBar = () => {
             defaultValue=""
             name="brand"
             id="brand"
-            className={s.select}
+            className={s.searchSelect}
             disabled={brand.length < 1}
           >
             <option className={s.placeholder} value="" disabled hidden>
@@ -60,7 +62,12 @@ const SearchBar = () => {
         </div>
 
         <div className={s.labelBox}>
-          <label className={s.label} htmlFor="rentalPrice">
+          {watch("rentalPrice") ? (
+            <span className={s.priceOption}>To $</span>
+          ) : (
+            <span className={s.pricePlaceholder}>Choose a price</span>
+          )}
+          <label className={s.searchFormLabel} htmlFor="rentalPrice">
             Price/ 1 hour
           </label>
           <select
@@ -68,21 +75,24 @@ const SearchBar = () => {
             defaultValue=""
             name="rentalPrice"
             id="rentalPrice"
-            className={s.select}
+            className={clsx(s.searchSelect, s.priceSearchSelect)}
           >
-            <option className={s.placeholder} value="" disabled hidden>
-              Price/ 1 hour
-            </option>
+            <option
+              className={s.placeholderPrice}
+              value=""
+              disabled
+              hidden
+            ></option>
             {prices.map((item) => (
               <option key={item} value={item}>
-                To ${item}
+                {item}
               </option>
             ))}
           </select>
           <IoIosArrowDown size={20} className={s.selectIcon} />
         </div>
         <div className={s.labelBox}>
-          <label className={s.label} htmlFor="mileage">
+          <label className={s.searchFormLabel} htmlFor="mileage">
             Сar mileage / km
           </label>
           <div className={s.inputSplit}>

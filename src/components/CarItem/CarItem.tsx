@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
+
 import { selectLikes } from "../../redux/likes/selectors";
 import type { ICar } from "../../redux/cars/slice";
 import LikeButton from "../LikeButton/LikeButton";
@@ -61,7 +62,7 @@ const CarItem = ({
         </div>
       </div>
       <Button
-        className={s.readMore}
+        className={s.readMoreBtn}
         text="Read more"
         type="button"
         onClick={handleClick}

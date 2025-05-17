@@ -68,7 +68,7 @@ const CarDetailsPage = () => {
         <div className={s.rightBox}>
           <div className={s.firstInform}>
             <h3 className={s.subtitle}>
-              {car?.brand} {car?.model},{car?.year}
+              {car?.brand} {car?.model}, {car?.year}
             </h3>
             <p className={s.id}>Id: {car?.id}</p>
             <div className={s.secondLine}>

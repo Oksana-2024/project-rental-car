@@ -1,14 +1,16 @@
 import { useEffect } from "react";
+import { useSelector } from "react-redux";
+
+import { useAppDispatch } from "../hooks/useAppDispatch";
+import { getBrands } from "../redux/brands/operations";
+import { selectPage, selectTotalPages } from "../redux/cars/selectors";
+import { loadMoreCars } from "../redux/cars/operations";
+
 import Button from "../components/Button/Button";
 import CarList from "../components/CarList/CarList";
 import Container from "../components/Container/Container";
 import SearchBar from "../components/SearchBar/SearchBar";
-import { useAppDispatch } from "../hooks/useAppDispatch";
 import s from "./CarsPage.module.css";
-import { getBrands } from "../redux/brands/operations";
-import { loadMoreCars } from "../redux/cars/operations";
-import { useSelector } from "react-redux";
-import { selectPage, selectTotalPages } from "../redux/cars/selectors";
 
 const CarsPage = () => {
   const dispatch = useAppDispatch();
@@ -20,10 +22,10 @@ const CarsPage = () => {
   const totalPages = useSelector(selectTotalPages);
 
   return (
-   <section className={s.carsPage}>
+    <section className={s.carsPage}>
       <Container>
         <SearchBar />
-  
+
         <CarList />
         {totalPages > page && (
           <Button
@@ -34,7 +36,7 @@ const CarsPage = () => {
           />
         )}
       </Container>
-   </section>
+    </section>
   );
 };
 

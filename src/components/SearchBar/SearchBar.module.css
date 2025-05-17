@@ -1,9 +1,15 @@
 .searchBtn {
   width: 156px;
   height: 44px;
+  background-color: var(--btn-bg);
+  transition: background-color 0.3s var(--main-transition);
 }
 
-.form {
+.searchBtn:hover {
+  background-color: var(--hover-bg);
+}
+
+.searchForm {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -22,7 +28,7 @@
   position: relative;
 }
 
-.select {
+.searchSelect {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -49,7 +55,7 @@
   background-color: var(--input-bg);
 }
 
-.label {
+.searchFormLabel {
   font-weight: 400;
   font-size: 12px;
   line-height: 1.33;
@@ -72,13 +78,13 @@
 .inputLabelFrom,
 .inputRight,
 .inputLeft,
-.select {
+.searchSelect {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.25;
 }
 
-.select option {
+.searchSelect option {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -87,7 +93,6 @@
   border-radius: 12px;
   padding: 12px 16px;
   width: 204px;
-  height: 44px;
   background-color: var(--input-bg);
   font-weight: 500;
   font-size: 16px;
@@ -102,11 +107,11 @@
   pointer-events: none;
 }
 
-.select:focus + .selectIcon {
+.searchSelect:focus + .selectIcon {
   transform: rotateX(180deg);
 }
 
-.select + .selectIcon {
+.searchSelect + .selectIcon {
   transform: rotateX(0deg);
   transition: transform 500ms var(--main-transition);
 }
@@ -115,9 +120,34 @@
   color: var(--main-color);
 }
 
-.select option:checked,
-.select:focus option:checked,
-.select:focus-visible option:checked {
+.priceOption {
+  position: absolute;
+  top: 36px;
+  left: 16px;
+  color: var(--main-color);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  pointer-events: none;
+}
+
+.pricePlaceholder {
+  position: absolute;
+  top: 36px;
+  left: 16px;
+  color: var(--main-color);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  pointer-events: none;
+}
+.priceSearchSelect {
+  padding-left: 46px;
+}
+
+.searchSelect option:checked,
+.searchSelect:focus option:checked,
+.searchSelect:focus-visible option:checked {
   background: var(--input-bg);
   color: var(--main-color);
 }
