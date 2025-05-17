@@ -1,11 +1,12 @@
+import { useEffect } from "react";
 import { useSelector } from "react-redux";
-import CarItem from "../CarItem/CarItem";
+
 import { selectCars, selectIsLoading } from "../../redux/cars/selectors";
 import { useAppDispatch } from "../../hooks/useAppDispatch";
-import { useEffect } from "react";
 import { getCars } from "../../redux/cars/operations";
-import s from "./CarList.module.css";
+import CarItem from "../CarItem/CarItem";
 import Loader from "../Loader/Loader";
+import s from "./CarList.module.css";
 
 const CarList = () => {
   const carItems = useSelector(selectCars);

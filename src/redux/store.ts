@@ -1,14 +1,15 @@
 import { configureStore } from "@reduxjs/toolkit";
-import brandsReducer from "./brands/slice";
-import carsReducer from "./cars/slice";
-import likesReducer from "./likes/slice";
 import storage from "redux-persist/lib/storage";
 import { persistStore, persistReducer } from "redux-persist";
 
+import brandsReducer from "./brands/slice";
+import carsReducer from "./cars/slice";
+import likesReducer from "./likes/slice";
+
 const persistConfig = {
-  key: "likes", // Ключ для сховища
-  storage, // Тип сховища
-  whitelist: ["likes"], // Масив частин стану для збереження
+  key: "likes",
+  storage,
+  whitelist: ["likes"],
 };
 
 const persistedReducer = persistReducer(persistConfig, likesReducer);
@@ -22,7 +23,6 @@ const store = configureStore({
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
       serializableCheck: {
-        // Ігноруємо типи дій redux-persist
         ignoredActions: ["persist/PERSIST", "persist/REHYDRATE"],
       },
     }),
