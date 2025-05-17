@@ -3,12 +3,11 @@ import DatePicker, { registerLocale } from "react-datepicker";
 import { toast } from "react-toastify";
 import "react-datepicker/dist/react-datepicker.css";
 import { zodResolver } from "@hookform/resolvers/zod";
-
 import { enGB } from "date-fns/locale/en-GB";
 
+import { schemaRentForm } from "../../utils/schemaRentForm";
 import Button from "../Button/Button";
 import s from "./RentForm.module.css";
-import { schemaRentForm } from "../../utils/schemaRentForm";
 
 registerLocale("en-GB", enGB);
 
@@ -25,7 +24,7 @@ const RentForm = () => {
   });
 
   const notify = () =>
-    toast("Your booking request has been sent successfully.");
+    toast.success("Your booking request has been sent successfully.");
 
   return (
     <div className={s.formContainer}>

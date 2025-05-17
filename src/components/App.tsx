@@ -4,7 +4,6 @@ import { ToastContainer } from "react-toastify";
 
 import Layout from "./Layout.tsx";
 
-
 const Home = lazy(() => import("../pages/HomePage.tsx"));
 const Car = lazy(() => import("../pages/CarsPage.tsx"));
 const CarDetails = lazy(() => import("../pages/CarDetailsPage.tsx"));
@@ -12,7 +11,7 @@ const CarDetails = lazy(() => import("../pages/CarDetailsPage.tsx"));
 function App() {
   return (
     <>
-      <Suspense >
+      <Suspense>
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
@@ -22,7 +21,7 @@ function App() {
           </Route>
         </Routes>
       </Suspense>
-      <ToastContainer />
+      <ToastContainer position="top-center" />
     </>
   );
 }

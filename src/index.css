@@ -15,6 +15,10 @@
   --main-font: "Manrope", sans-serif;
   --decor-line: #dadde1;
   --main-transition: ease;
+  --toastify-toast-bd-radius: 12px;
+  --toastify-font-family: var(--main-font);
+  --toastify-text-color-light: var(--main-color);
+  --toastify-color-success: var(--accent-color);
 }
 
 h1,
