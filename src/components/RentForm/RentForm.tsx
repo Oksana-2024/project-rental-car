@@ -62,6 +62,7 @@ const RentForm = () => {
             render={({ field }) => (
               <DatePicker
                 locale="en-GB"
+                minDate={new Date()}
                 selected={field.value as unknown as Date}
                 dateFormat="dd.MM.yyyy"
                 className={s.datePicker}
