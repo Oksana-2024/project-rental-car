@@ -1,0 +1,65 @@
+.carItem {
+  position: relative;
+}
+
+.first {
+  margin-bottom: 8px;
+}
+
+.descCar {
+  display: flex;
+  flex-wrap: wrap;
+  color: var(--gray-color);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.33;
+  gap: 6px;
+}
+
+.descCar span:not(:last-child)::after {
+  content: "|";
+  margin-left: 6px;
+  color: var(--decor-line);
+}
+
+.ownDesc {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.subtitle {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.subAccent {
+  color: var(--accent-color);
+  margin-left: 0.3em;
+}
+
+.likeBtn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  cursor: pointer;
+}
+
+.img {
+  border-radius: 14px;
+  margin-bottom: 16px;
+}
+
+.readMore {
+  width: 276px;
+  height: 44px;
+}
+
+.descCarBox {
+  margin-bottom: 28px;
+}

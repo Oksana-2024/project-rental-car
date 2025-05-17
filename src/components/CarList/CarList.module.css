@@ -1,0 +1,9 @@
+.carList {
+  display: grid;
+  grid-template-columns: repeat(4, 276px);
+  gap: 48px 32px;
+  padding-top: 56px;
+}
+.listItem {
+  width: 276px;
+}

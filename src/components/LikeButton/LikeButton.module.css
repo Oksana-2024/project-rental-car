@@ -1,0 +1,7 @@
+.favorite {
+  fill: var(--accent-color);
+}
+
+.hurt {
+  fill: var(--white-color);
+}
