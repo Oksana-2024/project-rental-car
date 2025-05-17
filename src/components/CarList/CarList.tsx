@@ -14,7 +14,7 @@ const CarList = () => {
   const dispatch = useAppDispatch();
   useEffect(() => {
     dispatch(getCars(true));
-  }, []);
+  }, [dispatch]);
 
   return isLoading ? (
     <Loader />

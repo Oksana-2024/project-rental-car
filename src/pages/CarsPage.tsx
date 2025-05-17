@@ -16,7 +16,7 @@ const CarsPage = () => {
   const dispatch = useAppDispatch();
   useEffect(() => {
     dispatch(getBrands());
-  }, []);
+  }, [dispatch]);
 
   const page = useSelector(selectPage);
   const totalPages = useSelector(selectTotalPages);
