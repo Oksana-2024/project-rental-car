@@ -1,0 +1,22 @@
+.loadMoreBtn {
+  border: 1px solid var(--btn-bg);
+  width: 156px;
+  height: 44px;
+  background-color: transparent;
+  color: var(--main-color);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 80px;
+  transition: border 0.3s var(--main-transition);
+}
+
+.carsPage {
+  padding-top: 84px;
+  padding-bottom: 124px;
+}
+
+.loadMoreBtn:hover,
+.loadMoreBtn:focus {
+  border: 1px solid var(--hover-bg);
+  background-color: transparent;
+}

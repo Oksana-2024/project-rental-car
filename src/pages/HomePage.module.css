@@ -1,0 +1,52 @@
+.home {
+  background-image: url("../assets/img/Picture.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@media screen and (min-resolution: 192dpi),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 2dppx) {
+  .home {
+    background-image: url("../assets/img/Picture@2x.png");
+  }
+}
+
+.homeContaimer {
+  height: calc(100vh - 68px);
+  color: var(--white-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  padding-top: 570px;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+
+.descr {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33;
+  margin-bottom: 40px;
+}
+
+.homeLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  width: 276px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.25;
+  color: var(--white-color);
+  background-color: var(--btn-bg);
+  border-radius: 12px;
+}

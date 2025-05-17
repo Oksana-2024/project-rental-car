@@ -1,0 +1,84 @@
+.detailPage {
+  padding-top: 84px;
+  padding-bottom: 104px;
+}
+.detail {
+  display: flex;
+  flex-direction: row;
+  gap: 72px;
+}
+.imgDetails {
+  border-radius: 19px;
+  margin-bottom: 40px;
+}
+.subtitle {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33;
+  margin-bottom: 8px;
+}
+
+.id {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  color: var(--gray-color);
+  margin-bottom: 8px;
+}
+
+.address {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+}
+
+
+.secondLine {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.price {
+  color: var(--accent-color);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33;
+  margin-bottom: 32px;
+}
+
+.desc {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+.firstInform {
+  margin-bottom: 68px;
+}
+
+.subtitleDescr {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  align-items: center;
+}
+
+.secondInform,
+.thirdInform {
+  margin-bottom: 80px;
+}
