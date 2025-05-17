@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --header-bg: #f2f4f7;
+  --btn-bg: #3470ff;
+  --input-bg: #f7f7f7;
+  --hover-bg: #0b44cd;
+  --main-color: #101828;
+  --accent-color: #3470ff;
+  --white-color: #fff;
+  --gray-color: #8d929a;
+  --main-font: "Manrope", sans-serif;
+  --decor-line: #dadde1;
+  --main-transition: ease;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-family: var(--main-font);
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+select,
+textarea {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--main-font);
+  color: var(--main-color);
+}
+
+body {
+  font-family: var(--main-font);
+  color: var(--main-color);
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("/src/assets/fonts/Manrope-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("/src/assets/fonts/Manrope-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("/src/assets/fonts/Manrope-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("/src/assets/fonts/Manrope-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("/src/assets/fonts/Manrope-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("/src/assets/fonts/Manrope-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("/src/assets/fonts/Manrope-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("/src/assets/fonts/Manrope-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+.react-datepicker__header {
+  background-color: var(--white-color) !important ;
+  border-bottom: 1px solid var(--accent-color) !important;
+  border-radius: 14px 14px 0 0 !important;
+  padding: 12px !important;
+}
+
+.react-datepicker__navigation-icon::before {
+  border-color: var(--accent-color) !important;
+}
+
+.react-datepicker__day-name,
+.react-datepicker__day--outside-month {
+  color: var(--gray-color) !important;
+}
+
+.react-datepicker {
+  border-radius: 14px !important;
+  font-family: var(--main-font) !important;
+  font-size: 12px !important;
+  line-height: 1.2 !important;
+  border: 1px solid var(--accent-color) !important;
+  font-weight: 500 !important;
+}
+
+.react-datepicker__day--selected,
+.react-datepicker__day--keyboard-selected {
+  background-color: var(--hover-bg) !important;
+  border-radius: 100% !important;
+  color: var(--white-color) !important;
+}
+
+.react-datepicker__navigation--next {
+  right: 6px !important;
+  top: 6px !important;
+}
+
+.react-datepicker__navigation-icon--previous::before {
+  right: -11px !important;
+  top: 11px !important;
+}
+
+.react-datepicker__day:hover {
+  background-color: var(--accent-color) !important;
+  color: var(--white-color) !important;
+  border-radius: 100% !important;
+}
