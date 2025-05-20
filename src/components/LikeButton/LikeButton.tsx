@@ -13,13 +13,13 @@ type TLikeButtonProps = Pick<ICar, "id"> & {
 const LikeButton = ({ id, like, className }: TLikeButtonProps) => {
   const dispatch = useAppDispatch();
   return (
-    <div onClick={() => dispatch(toggleLike(id))} className={className}>
+    <button onClick={() => dispatch(toggleLike(id))} className={className}>
       {like ? (
         <MdOutlineFavorite size={20} className={s.favorite} />
       ) : (
         <MdOutlineFavoriteBorder size={20} className={s.hurt} />
       )}
-    </div>
+    </button>
   );
 };
 
