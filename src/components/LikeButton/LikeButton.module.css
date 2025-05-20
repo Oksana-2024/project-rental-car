@@ -5,10 +5,3 @@
 .hurt {
   fill: var(--white-color);
 }
-
-.likeBtn {
-  background-color: transparent;
-  width: 22px;
-  height: 22px;
-  padding: 1px;
-}

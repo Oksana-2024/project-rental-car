@@ -73,14 +73,17 @@ const carsSlice = createSlice({
         state.isError = true;
       })
       .addCase(loadMoreCars.pending, (state) => {
+        state.isLoading = true;
         state.isError = false;
       })
       .addCase(loadMoreCars.fulfilled, (state, { payload }) => {
         state.items = [...state.items, ...payload.cars];
+        state.isLoading = false;
         state.totalPages = payload.totalPages;
         state.page = payload.page;
       })
       .addCase(loadMoreCars.rejected, (state) => {
+        state.isLoading = false;
         state.isError = true;
       });
   },

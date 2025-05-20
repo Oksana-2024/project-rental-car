@@ -77,6 +77,12 @@ const SearchBar = () => {
             id="rentalPrice"
             className={clsx(s.searchSelect, s.priceSearchSelect)}
           >
+            <option
+              className={s.placeholderPrice}
+              value=""
+              disabled
+              hidden
+            ></option>
             {prices.map((item) => (
               <option key={item} value={item}>
                 {item}
