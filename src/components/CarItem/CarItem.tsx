@@ -7,6 +7,7 @@ import type { ICar } from "../../redux/cars/slice";
 import LikeButton from "../LikeButton/LikeButton";
 import Button from "../Button/Button";
 import s from "./CarItem.module.css";
+import { formatMileage } from "../../utils/formatMileage";
 
 type ICarItemProps = ICar;
 
@@ -58,7 +59,7 @@ const CarItem = ({
         </div>
         <div className={s.descCar}>
           <span>{type}</span>
-          <span>{mileage}</span>
+          <span>{formatMileage(mileage)}</span>
         </div>
       </div>
       <Button
