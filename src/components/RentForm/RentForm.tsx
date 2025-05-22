@@ -8,6 +8,7 @@ import { enGB } from "date-fns/locale/en-GB";
 import { schemaRentForm } from "../../utils/schemaRentForm";
 import Button from "../Button/Button";
 import s from "./RentForm.module.css";
+import "./datePicker.css"
 
 registerLocale("en-GB", enGB);
 

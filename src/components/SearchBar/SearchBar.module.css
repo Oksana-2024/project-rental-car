@@ -55,7 +55,8 @@
   background-color: var(--input-bg);
 }
 
-.searchFormLabel {
+.searchFormLabel,
+.selectLabel {
   font-weight: 400;
   font-size: 12px;
   line-height: 1.33;
@@ -78,7 +79,8 @@
 .inputLabelFrom,
 .inputRight,
 .inputLeft,
-.searchSelect {
+.searchSelect,
+.priceSearchSelect {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.25;
@@ -100,54 +102,3 @@
   color: var(--gray-color);
 }
 
-.selectIcon {
-  position: absolute;
-  top: 36px;
-  right: 18px;
-  pointer-events: none;
-}
-
-.searchSelect:focus + .selectIcon {
-  transform: rotateX(180deg);
-}
-
-.searchSelect + .selectIcon {
-  transform: rotateX(0deg);
-  transition: transform 500ms var(--main-transition);
-}
-
-.placeholder {
-  color: var(--main-color);
-}
-
-.priceOption {
-  position: absolute;
-  top: 36px;
-  left: 16px;
-  color: var(--main-color);
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.25;
-  pointer-events: none;
-}
-
-.pricePlaceholder {
-  position: absolute;
-  top: 36px;
-  left: 16px;
-  color: var(--main-color);
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.25;
-  pointer-events: none;
-}
-.priceSearchSelect {
-  padding-left: 46px;
-}
-
-.searchSelect option:checked,
-.searchSelect:focus option:checked,
-.searchSelect:focus-visible option:checked {
-  background: var(--input-bg);
-  color: var(--main-color);
-}
