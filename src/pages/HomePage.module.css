@@ -14,7 +14,7 @@
 }
 
 .homeContainer {
-  height: calc(100vh - 68px);
+  height: calc(100vh - 69px);
   color: var(--white-color);
   display: flex;
   flex-direction: column;
